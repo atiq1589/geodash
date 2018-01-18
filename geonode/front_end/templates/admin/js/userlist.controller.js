@@ -1,28 +1,20 @@
 (function(){
-    angular.module('userApp').controller('userListController', function($scope, uiGridConstants) {
-        $scope.user={
-            Sector : 'Government',
-            Organization : 'LGED',
-            Department : 'Ministry',
-            Section : undefined,
-            IsAdminUser:false
-        };
+    angular.module('userApp').controller('userListController',
+     function($scope, uiGridConstants,userService) {
+        $scope.user={};
+        $scope.userInfoUrl="/static/admin/js/user.json";
         $scope.gridOption = {
             paginationPageSizes: [25, 50, 75, 100],
             paginationPageSize: 25,
             rowHeight:40,
-            data: [
-                {Name : 'Rudra',Section: 'section',Role :'GIS'},
-                {Name : 'Rudra',Section: 'section',Role :'GIS'},
-                {Name : 'Rudra',Section: 'section',Role :'GIS'},
-                {Name : 'Rudra',Section: 'section',Role :'GIS'}
-            ],
+            data: [],
             enableGridMenu: true,
             exporterCsvFilename: self.layerName + '.csv',
             enableHorizontalScrollbar: uiGridConstants.scrollbars.ALWAYS,
             columnDefs: [
-                { field: 'Name' },
-                { field: 'Section' },
+                {field : "Id",visible:false},
+                {field: 'Name' },
+                {field: 'Section' },
                 {field: 'Role'},
                 {
                     field: 'Action',
@@ -41,18 +33,35 @@
                 }
             ]
         };
-        $scope.columnSetting = {
-            id: { ignore: true }
-        };
         $scope.gridOption.editUser = function (row) {
             alert('edit-user');
         };
         $scope.gridOption.deleteUser = function (row) {
             alert('delete-user');
         };
-        $scope.createUSer=function(){
+        $scope.createUser=function(){
             console.log($scope.user);
+            userService.createUser("/",$scope.user).then(function(response){
+                console.log(response);
+            },function(error){
+                console.log(error);
+            });
         };
+
+        function getUserInformation(){
+            userService.getUserInformation($scope.userInfoUrl).then(function(response){
+                $scope.gridOption.data=response.userlist;
+                $scope.user=response.userCreationInfo;
+            },function(error){
+                console.log(error);
+            });
+        }
+
+        function inIt(){
+            getUserInformation();
+        }
+
+        inIt();
     
     });
 })();

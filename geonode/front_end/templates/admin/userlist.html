@@ -168,7 +168,7 @@
                                                     </div>
                                                     <div class="col-md-6" style="margin-top: 45px">
                                                             <form class="form-horizontal"
-                                                            ng-submit="createUSer()" 
+                                                            ng-submit="createUser()" 
                                                             name="user-creation-form">
                                                                 <div class="form-group">
                                                                   <label class="control-label col-sm-2" for="email">Sector</label>
@@ -206,10 +206,12 @@
                                                                 <div class="form-group">
                                                                     <label class="control-label col-sm-2" for="sec">Section</label>
                                                                             <div class="col-sm-10">
-                                                                                    <select class="form-control" id="sec">
+                                                                                    <select 
+                                                                                    class="form-control"
+                                                                                    ng-options="item as item for item in user.SectionOptions"
+                                                                                    ng-model="user.Section"
+                                                                                    id="sec">
                                                                                             <option style="display: none" value="">Select section</option>
-                                                                                            <option>Mis</option>
-                                                                                            <option>Gis</option>
                                                                                     </select>
                                                                             </div>
                                                                  </div>
@@ -265,5 +267,6 @@ $(function () {
 <script src="/static/.components/angular-ui-grid/ui-grid.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-cookies.min.js"></script>
 <script src="/static/admin/js/user.module.js"></script>
+<script src="/static/admin/js/user.service.js"></script>
 <script src="/static/admin/js/userlist.controller.js"></script>
 {% endblock %}
