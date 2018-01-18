@@ -104,7 +104,7 @@
                                          <div class="form-group">
                                                 <label class="control-label col-sm-5" for="uploadTime">Uploaded Time</label>
                                                 <div class="col-sm-7"> 
-                                                  <input type="date" 
+                                                  <input type="text" 
                                                   class="form-control"
                                                    id="uploadTime" 
                                                    disabled
@@ -134,7 +134,61 @@
                                     <button type="button" class="btn btn-default pull-right" ng-click="publishLayer()">Publish</button>
                                 </div>
                             </div>
+                        </div>
+                        <div ng-controller="layerListController" class="col-md-12">
+                            <div class="col-md-3">
+                                    <div class="input-group col-md-12 pull-left" style="margin-bottom: 10px">
+                                            <span class="input-group-addon" id="sizing-addon2">
+                                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="text" class="form-control"
+                                            ng-model="search.text"
+                                            ng-change="filterLayer()"
+                                            ng-model-options="{ debounce: 200 }"
+                                            placeholder="Search" 
+                                            aria-describedby="sizing-addon2">
+                                          </div>
                             </div>
+                            <div class="col-md-5">
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button 
+                                            type="button"
+                                            ng-click="setPermissionLevel('All')" 
+                                            ng-class="permissionLevel=='All' ? 'active' : 'none'"
+                                            class="btn btn-default">
+                                            All
+                                        </button>
+                                        <button 
+                                            type="button"
+                                            ng-click="setPermissionLevel('Free')" 
+                                            ng-class="permissionLevel=='Free' ? 'active' : 'none'"
+                                            class="btn btn-default">
+                                            Free
+                                        </button>
+                                        <button 
+                                            type="button"
+                                            ng-click="setPermissionLevel('Limited')" 
+                                            ng-class="permissionLevel=='Limited' ? 'active' : 'none'"
+                                            class="btn btn-default">
+                                            Limited
+                                        </button>
+                                        <button 
+                                            type="button"
+                                            ng-click="setPermissionLevel('Archived')" 
+                                            ng-class="permissionLevel=='Archived' ? 'active' : 'none'"
+                                            class="btn btn-default">
+                                            Archived
+                                         </button>
+                                    
+                                          </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div ui-grid="gridOption" style="width: 100%;height: 480px"
+                            ui-grid-auto-resize 
+                            ui-grid-pagination
+                            class="grid">
+                      </div>
+                        </div>
 
                     </div>    
                                 <div class="row">
@@ -765,4 +819,5 @@
 <script src="/static/admin/js/layer.module.js"></script>
 <script src="/static/admin/js/layer.service.js"></script>
 <script src="/static/admin/js/approve-layer.controller.js"></script>
+<script src="/static/admin/js/layerlist.controller.js"></script>
 {% endblock %}
