@@ -39,6 +39,8 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from django.utils.translation import ugettext_lazy as _
 from django.db import models
+from django.db import models, connection, transaction
+from django.core.serializers.json import DjangoJSONEncoder
 import httplib2
 import urlparse
 import urllib
@@ -61,6 +63,8 @@ ALPHABET = string.ascii_uppercase + string.ascii_lowercase + \
 ALPHABET_REVERSE = dict((c, i) for (i, c) in enumerate(ALPHABET))
 BASE = len(ALPHABET)
 SIGN_CHARACTER = '$'
+
+SQL_PARAMS_RE = re.compile(r'%\(([\w_\-]+)\)s')
 
 http_client = httplib2.Http()
 
@@ -612,6 +616,57 @@ def json_response(body=None, errors=None, redirect_to=None, exception=None,
         body = json.dumps(body)
     return HttpResponse(body, content_type=content_type, status=status)
 
+def json_response2(body=None, errors=None, url=None, redirect_to=None, exception=None,
+                  content_type=None, status=None):
+    """Create a proper JSON response. If body is provided, this is the response.
+    If errors is not None, the response is a success/errors json object.
+    If redirect_to is not None, the response is a success=True, redirect_to object
+    If the exception is provided, it will be logged. If body is a string, the
+    exception message will be used as a format option to that string and the
+    result will be a success=False, errors = body % exception
+    """
+    if isinstance(body, HttpResponse):
+        return body
+    if content_type is None:
+        content_type = "application/json"
+    if errors:
+        if isinstance(errors, basestring):
+            errors = [errors]
+        body = {
+            'success': False,
+            'errors': errors
+        }
+    elif redirect_to:
+        body = {
+            'success': True,
+            'redirect_to': redirect_to
+        }
+    elif url:
+        body = {
+            'success': True,
+            'url': url
+        }
+    elif exception:
+        if body is None:
+            body = "Unexpected exception %s" % exception
+        else:
+            body = body % exception
+        body = {
+            'success': False,
+            'errors': [body]
+        }
+    elif body:
+        pass
+    else:
+        raise Exception("must call with body, errors or redirect_to")
+
+    if status is None:
+        status = 200
+
+    if not isinstance(body, basestring):
+        body = json.dumps(body, cls=DjangoJSONEncoder)
+    return HttpResponse(body, content_type=content_type, status=status)
+
 
 def num_encode(n):
     if n < 0:
@@ -917,3 +972,41 @@ def resignals():
         for signal in signals:
             signaltype.connect(signal['receiv_call'], sender=signal['sender_ista'],
                                weak=signal['is_weak'], dispatch_uid=signal['uid'])
+
+
+def parse_datetime(value):
+    for patt in settings.DATETIME_INPUT_FORMATS:
+        try:
+            if isinstance(value, dict):
+                value_obj = value['$'] if '$' in value else value['content']
+                return datetime.datetime.strptime(value_obj, patt)
+            else:
+                return datetime.datetime.strptime(value, patt)
+        except BaseException:
+            # tb = traceback.format_exc()
+            # logger.error(tb)
+            pass
+    raise ValueError("Invalid datetime input: {}".format(value))
+
+
+def _convert_sql_params(cur, query):
+    # sqlite driver doesn't support %(key)s notation,
+    # use :key instead.
+    if cur.db.vendor in ('sqlite', 'sqlite3', 'spatialite',):
+        return SQL_PARAMS_RE.sub(r':\1', query)
+    return query
+
+
+@transaction.atomic
+def raw_sql(query, params=None, ret=True):
+    """
+    Execute raw query
+    param ret=True returns data from cursor as iterator
+    """
+    with connection.cursor() as c:
+        query = _convert_sql_params(c, query)
+        c.execute(query, params)
+        if ret:
+            desc = [r[0] for r in c.description]
+            for row in c:
+                yield dict(zip(desc, row))

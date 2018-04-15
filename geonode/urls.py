@@ -241,3 +241,8 @@ urlpatterns += patterns('',
 #Custom injected app
 urlpatterns += geonode.front_end.urls.urlpatterns
 
+
+if settings.MONITORING_ENABLED:
+    urlpatterns += [url(r'^monitoring/',
+                        include('geonode.contrib.monitoring.urls',
+                                namespace='monitoring'))]

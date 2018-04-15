@@ -20,6 +20,7 @@
 
 # Django settings for the GeoNode project.
 import os
+import sys
 
 from geonode import __file__ as geonode_path
 from geonode import get_version
@@ -28,6 +29,7 @@ from distutils.util import strtobool
 # import djcelery
 import dj_database_url
 
+from datetime import timedelta
 
 #
 # General Django development settings
@@ -1200,3 +1202,25 @@ THESAURI = []
 # EMAIL_PORT = 80
 # EMAIL_HOST_USER = ""
 # EMAIL_HOST_PASSWORD = ""
+
+TEST = 'test' in sys.argv
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+MONITORING_DISABLE_CSRF = False
+
+MONITORING_ENABLED = True
+# add following lines to your local settings to enable monitoring
+if MONITORING_ENABLED:
+    INSTALLED_APPS += ('geonode.contrib.monitoring',)
+    MIDDLEWARE_CLASSES += ('geonode.contrib.monitoring.middleware.MonitoringMiddleware',)
+    MONITORING_CONFIG = None
+    MONITORING_HOST_NAME = 'localhost'
+    MONITORING_SERVICE_NAME = 'local-geonode'
+    MONITORING_HOST_NAME = 'localhost' #SITE_HOST_NAME
+
+INSTALLED_APPS += ('geonode.contrib.ows_api',)
+
+GEOIP_PATH = os.path.join(os.path.dirname(__file__), '..', 'GeoLiteCity.dat')
+
+MONITORING_DATA_TTL = timedelta(days=7)

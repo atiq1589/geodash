@@ -723,3 +723,15 @@ def justcopy(origin, target):
         if not os.path.exists(target):
             os.makedirs(target)
         shutil.copy(origin, target)
+
+
+@task
+def updategeoip(options):
+    """
+    Update geoip db
+    """
+    settings = options.get('settings', '')
+    if settings:
+        settings = 'DJANGO_SETTINGS_MODULE=%s' % settings
+
+    sh("%s python -W ignore manage.py updategeoip -o" % settings)
