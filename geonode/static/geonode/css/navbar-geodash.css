@@ -18,11 +18,11 @@ footer
 }
 .navbar-brand {
 	background-image: url(geodash-logo.png);
-	height: 62px;
-	width: 175px;
+	height: 39px;
+	width: 161px;
     text-indent: -99999px;
     margin-left: -5px !important;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 #navbar {
     margin-top: 16px;
