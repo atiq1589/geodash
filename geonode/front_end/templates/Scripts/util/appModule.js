@@ -312,11 +312,10 @@ function($rootScope, $window, $timeout, $http, mapRepository, mapService, dirtyM
             })
         ]);
         var view = new ol.View({
-            minZoom: 6,
+            minZoom: 0,
             maxZoom: 21,
             projection: 'EPSG:3857',
             center: centerExtent,
-            extent:maxExtent,
             zoom: 6
         });
 
