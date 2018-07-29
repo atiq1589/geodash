@@ -1,4 +1,4 @@
-﻿mapModule.factory('WmsSurfLayer', [
+﻿angular.module("mapModule").factory('WmsSurfLayer', [
     'SurfLayerBase', 'featureFilterGenerator',
     function (SurfLayerBase, featureFilterGenerator) {
         function WmsSurfLayer(layerInfo) {

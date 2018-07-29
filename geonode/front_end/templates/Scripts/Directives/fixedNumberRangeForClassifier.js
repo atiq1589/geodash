@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('fixedNumberRangeForClassifier', [
+﻿angular.module("app.helpers").directive('fixedNumberRangeForClassifier', [
     function () {
         return {
             require: 'ngModel',

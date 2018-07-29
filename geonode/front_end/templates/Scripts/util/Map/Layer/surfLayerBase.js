@@ -1,4 +1,4 @@
-﻿mapModule
+﻿angular.module("mapModule")
 .value('layerInterface', ['setMap', 'unsetMap', 'applyStyle', 'getDataId', 'setLayerVisible', 'setCreateFeatureEnabled', 'setEditFeatureEnabled', 'setRenderingMode', 'setAttributeDefinition', 'setSavedDataId'])
 .factory('SurfLayerBase', [
     'layerInterface', 'jantrik.Event',

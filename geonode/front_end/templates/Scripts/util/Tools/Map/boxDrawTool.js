@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .factory('BoxDrawTool', BoxDrawTool);
 
 BoxDrawTool.$inject = ['mapService'];

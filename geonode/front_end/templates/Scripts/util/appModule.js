@@ -1,4 +1,7 @@
-﻿﻿var appModule = angular.module("appModule", ['repositoryModule', 'mapModule', 'ui.bootstrap', 'tree', 'colorpicker.module', 'app.helpers', 'surfToastr', 'handsOnTableModule',
+﻿﻿// import maintenanceMessageManager from 'maintenanceMessageManager';
+var jantrik = require('./jantrik.EventPool').default;
+
+var appModule = angular.module("appModule", ['repositoryModule', 'mapModule', 'ui.bootstrap', 'tree', 'colorpicker.module', 'app.helpers', 'surfToastr', 'handsOnTableModule',
 'app.filters', 'truncateModule', 'checkboxAll', 'colorPalette', 'table.heightAdjuster', 'angularFileUpload', 'userProfileModule', 'csvImport', 'ngDragDrop', 'Jantrik.Event', 'ngCookies', 'LayerApp', 'SystemSettingsApp','app.helpers','ui.grid', 'ui.grid.selection', 'ui.grid.cellNav','ui.grid.autoResize','ui.grid.pagination', 'sarsha.spinner','rzModule'
 ])
 .config(function($httpProvider, $interpolateProvider) {
@@ -240,7 +243,7 @@ function($rootScope, $window, $timeout, $http, mapRepository, mapService, dirtyM
         }
     });
 
-    maintenanceMessageManager.ShowMessageIfPossible();
+    // window.maintenanceMessageManager.ShowMessageIfPossible();
 
     $("#map_canvas,#attribute-table").click(function(event) {
         event.stopPropagation();
@@ -346,7 +349,7 @@ function($rootScope, $window, $timeout, $http, mapRepository, mapService, dirtyM
 }
 ]);
 
-appModule.controller('appController', [
+angular.module('appModule').controller('appController', [
 '$scope', 'mapService', '$modal', '$timeout', 'mapAccessLevel', 'interactionHandler',
 function($scope, mapService, $modal, $timeout, mapAccessLevel, interactionHandler) {
 mapService.setId(undefined);
@@ -449,7 +452,7 @@ mapService.events.register('infoLoaded', function(info) {
 }
 ]);
 
-appModule.directive('draftOnly', ['mapAccessLevel',
+angular.module('appModule').directive('draftOnly', ['mapAccessLevel',
 function(mapAccessLevel) {
 return {
     restrict: 'A',
@@ -466,7 +469,7 @@ return {
 }
 ]);
 
-appModule.value('fidColumnName', 'gid')
+angular.module('appModule').value('fidColumnName', 'gid')
 .value('geometryColumnName', 'geom')
 .value('imageColumnName', 'surfimages')
 .value('imageUrlRoot', '/Data/Image/')
@@ -474,7 +477,7 @@ appModule.value('fidColumnName', 'gid')
 .value('defaultDateFormat', 'dd MMM, yyyy')
 .value('defaultDateTimeFormat', 'dd MMM, yyyy h:m:s.sss a');
 
-appModule.directive("limitToMax", function () {
+angular.module('appModule').directive("limitToMax", function () {
     return {
         link: function (scope, element, attributes) {
             element.on("keydown keyup", function (e) {
@@ -491,7 +494,7 @@ appModule.directive("limitToMax", function () {
     };
 });
 
-appModule.directive("limitToMin", function () {
+angular.module('appModule').directive("limitToMin", function () {
     return {
         link: function (scope, element, attributes) {
             element.on("keydown keyup", function (e) {

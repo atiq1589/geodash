@@ -1,4 +1,4 @@
-﻿mapModule.directive('geoLocationToggleButton', [
+﻿angular.module("mapModule").directive('geoLocationToggleButton', [
     'mapTools',
     function (mapTools) {
         return {

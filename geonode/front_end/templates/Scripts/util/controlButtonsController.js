@@ -1,4 +1,4 @@
-﻿appModule.directive('injectTemplate', function($compile) {
+﻿angular.module('appModule').directive('injectTemplate', function($compile) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
@@ -7,7 +7,7 @@
         }
     }
 });
-appModule.controller("controlButtonsController", ["$scope", "$modal", "$timeout", "$rootScope", "$window", "projectService", 'mapModes', 'mapService', 'dirtyManager',
+angular.module('appModule').controller("controlButtonsController", ["$scope", "$modal", "$timeout", "$rootScope", "$window", "projectService", 'mapModes', 'mapService', 'dirtyManager',
     'featureService', 'interactionHandler', 'mapTools', 'CircleDrawTool', 'LayerService', 'urlResolver', '$q', 'BoxDrawTool', 'SurfMap', '$compile','surfToastr',
     'layerRepository','attributeGridService',
     function($scope, $modal, $timeout, $rootScope, $window, projectService, mapModes, mapService, dirtyManager, featureService, interactionHandler,

@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .factory('SetMarkerTool', SetMarkerTool);
 SetMarkerTool.$inject = ['mapService', 'layerService', 'SettingsService'];
 

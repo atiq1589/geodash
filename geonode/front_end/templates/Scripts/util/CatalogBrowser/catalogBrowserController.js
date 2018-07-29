@@ -1,4 +1,4 @@
-﻿appModule.controller('catalogBrowserController', catalogBrowserController);
+﻿angular.module('appModule').controller('catalogBrowserController', catalogBrowserController);
 catalogBrowserController.$inject = ['$scope',
     '$rootScope',
     'surfToastr',

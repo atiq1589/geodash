@@ -1,4 +1,4 @@
-mapModule.directive('cursorTooltip', [
+angular.module("mapModule").directive('cursorTooltip', [
     function () {
         return {
             restrict: 'EA',

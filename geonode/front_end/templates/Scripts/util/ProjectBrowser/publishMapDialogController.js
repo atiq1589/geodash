@@ -1,4 +1,4 @@
-﻿appModule.controller('publishMapDialogController', [
+﻿angular.module('appModule').controller('publishMapDialogController', [
     '$scope', 'selectedMap', '$modalInstance', 'mapRepository', 'urlResolver', 'mapService',
     function ($scope, selectedMap, $modalInstance, mapRepository, urlResolver, mapService) {
 

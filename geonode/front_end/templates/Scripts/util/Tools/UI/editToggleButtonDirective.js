@@ -1,4 +1,4 @@
-﻿mapModule.directive('editToggleButton', [
+﻿angular.module("mapModule").directive('editToggleButton', [
     'interactionHandler', 'mapTools',
     function (interactionHandler, mapTools) {
         return {

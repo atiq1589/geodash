@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('validatefilename', ['surfToastr',
+﻿angular.module("app.helpers").directive('validatefilename', ['surfToastr',
     function (surfToastr) {
         return {
             require: '?ngModel',

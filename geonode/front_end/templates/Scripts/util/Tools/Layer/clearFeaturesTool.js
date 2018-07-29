@@ -1,4 +1,4 @@
-﻿appModule.factory('ClearFeaturesTool', ['layerService',
+﻿angular.module('appModule').factory('ClearFeaturesTool', ['layerService',
     function (layerService) {
         return function ClearFeaturesTool(surfLayer) {
             var _thisTool = this;

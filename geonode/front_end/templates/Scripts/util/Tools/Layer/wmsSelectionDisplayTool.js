@@ -1,4 +1,4 @@
-﻿mapModule.factory('WmsSelectionDisplayTool', [
+﻿angular.module("mapModule").factory('WmsSelectionDisplayTool', [
     'jantrik.Event',
     function (Event) {
 

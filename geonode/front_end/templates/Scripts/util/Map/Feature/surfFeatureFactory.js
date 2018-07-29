@@ -1,4 +1,4 @@
-﻿mapModule.factory('surfFeatureFactory', [
+﻿angular.module("mapModule").factory('surfFeatureFactory', [
     '$http', 'urlResolver', 'geometryColumnName', '$q', 'SurfFeature',
     function ($http, urlResolver, geometryColumnName, $q, SurfFeature) {
         var wfsParams = {

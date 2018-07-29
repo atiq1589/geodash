@@ -1,4 +1,4 @@
-﻿mapModule.directive('locationSearch', [
+﻿angular.module("mapModule").directive('locationSearch', [
     'mapTools', '$timeout', '$document',
     function (mapTools, $timeout, $document) {
         return {

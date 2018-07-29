@@ -1,7 +1,7 @@
 ﻿(function() {
     'use strict';
     // '$modalInstance',
-    appModule
+    angular.module('appModule')
         .controller('printPreviewController', printPreviewController);
 
     printPreviewController.$inject = ['$scope', 'mapService', 'mapTools', '$window', '$http', 'surfToastr'];

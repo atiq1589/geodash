@@ -1,4 +1,4 @@
-﻿mapModule.factory('layerRenderingModeFactory', [
+﻿angular.module("mapModule").factory('layerRenderingModeFactory', [
     'urlResolver', 'SimpleWmsRenderingMode', 'NullRenderingMode', 'WmsSelectFeatureTool', 'WmsSelectionDisplayTool', 'WmsDeleteFeatureTool', 'RedoUndoTool', 'WmsEditFeatureTool', 'CreateFeatureTool', 'LocationCaptureTool', 'AttributeDisplayTool', 'mapTools', 'jantrik.Event',
     function (urlResolver, SimpleWmsRenderingMode, NullRenderingMode, WmsSelectFeatureTool, WmsSelectionDisplayTool, WmsDeleteFeatureTool, RedoUndoTool, WmsEditFeatureTool, CreateFeatureTool, LocationCaptureTool, AttributeDisplayTool, mapTools, Event) {
         var _olMap, _surfMap;

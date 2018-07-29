@@ -1,4 +1,4 @@
-﻿mapModule.directive('navigationHistoryButtons', [
+﻿angular.module("mapModule").directive('navigationHistoryButtons', [
     'mapTools',
     function (mapTools) {
         return {

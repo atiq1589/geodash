@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    appModule.controller('LayerSaveController', LayerSaveController);
+    angular.module('appModule').controller('LayerSaveController', LayerSaveController);
 
     LayerSaveController.$inject = ['layerService', '$modalInstance', 'surfToastr', 'projectService'];
 

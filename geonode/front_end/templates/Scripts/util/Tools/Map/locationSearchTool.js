@@ -1,4 +1,4 @@
-﻿mapModule.factory('LocationSearchTool', [
+﻿angular.module("mapModule").factory('LocationSearchTool', [
     'reprojection', '$q', 'ol', 'google', 'jantrik.Event', 'mapTools', 'surfToastr',
     function (reprojection, $q, ol, google, Event, mapTools, surfToastr) {
         function LocationSearchTool(searchMarker, olMap) {

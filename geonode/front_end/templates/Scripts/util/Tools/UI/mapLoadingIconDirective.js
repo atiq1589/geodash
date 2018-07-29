@@ -1,4 +1,5 @@
-﻿mapModule.directive('mapLoadingIcon', [
+﻿var jantrik = require('../../jantrik.EventPool').default;
+angular.module("mapModule").directive('mapLoadingIcon', [
    '$timeout',
     function ($timeout) {
         return {

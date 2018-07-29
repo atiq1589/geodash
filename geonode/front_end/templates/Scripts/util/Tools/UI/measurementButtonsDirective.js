@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
 .directive('measurementButtons', measurementButtons);
 measurementButtons.$inject = ['mapTools'];
 

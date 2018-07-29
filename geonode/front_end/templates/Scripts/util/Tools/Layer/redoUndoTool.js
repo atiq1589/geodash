@@ -1,4 +1,4 @@
-﻿mapModule.factory('RedoUndoTool', [
+﻿angular.module("mapModule").factory('RedoUndoTool', [
     'RedoUndo',
     function (RedoUndo) {
         return function RedoUndoTool(createFeatureTool, deleteFeatureTool, editFeatureTool) {

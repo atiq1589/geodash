@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('stylePreview', [
+﻿angular.module("app.helpers").directive('stylePreview', [
     'featureTypes', 'strokeDashstyles',
     function (featureTypes, strokeDashstyles) {
         return {

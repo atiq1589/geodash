@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('fixedNumberRange', [
+﻿angular.module("app.helpers").directive('fixedNumberRange', [
     function () {
         return {
             require: 'ngModel',

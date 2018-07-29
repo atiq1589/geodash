@@ -1,4 +1,4 @@
-﻿mapModule.directive('baseMapSwitcher', [
+﻿angular.module("mapModule").directive('baseMapSwitcher', [
     'mapTools',
     function (mapTools) {
         return {

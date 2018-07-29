@@ -1,4 +1,4 @@
-﻿repositoryModule.factory('userProfileRepository', [
+﻿angular.module('repositoryModule').factory('userProfileRepository', [
     '$http', 'urlResolver',
     function($http, urlResolver) {
         function getUserSettings() {

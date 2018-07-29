@@ -1,4 +1,4 @@
-﻿repositoryModule.factory('mapRepository', [
+﻿angular.module('repositoryModule').factory('mapRepository', [
     '$http', 'urlResolver', 'dirtyManager', 'surfToastr', '$cookies', '$window',
     function ($http, urlResolver, dirtyManager, surfToastr, $cookies, $window) {
 

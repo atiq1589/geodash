@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .directive('zoomToMaxExtentButton', zoomToMaxExtentButton);
 zoomToMaxExtentButton.$inject = ['mapTools'];
 

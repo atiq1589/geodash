@@ -1,4 +1,4 @@
-﻿mapModule.directive('featureRedoUndoButtons', [
+﻿angular.module("mapModule").directive('featureRedoUndoButtons', [
     'interactionHandler', 'mapTools',
     function (interactionHandler, mapTools) {
         var _dummyRedoUndoTool = {

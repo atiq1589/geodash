@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('mapLegend', [
+﻿angular.module("app.helpers").directive('mapLegend', [
     function () {
         return {
             restrict: 'E',

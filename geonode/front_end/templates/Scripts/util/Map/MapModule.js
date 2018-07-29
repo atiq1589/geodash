@@ -1,6 +1,6 @@
 ﻿var mapModule = angular.module("mapModule", []);
 
-mapModule.factory("mapModes", [function () {
+angular.module("mapModule").factory("mapModes", [function () {
     return {
         select: "select"
         , addShape: "addShape"

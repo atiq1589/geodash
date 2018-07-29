@@ -1,4 +1,4 @@
-﻿appModule.factory('CSVEditorService', ['$http',
+﻿angular.module('appModule').factory('CSVEditorService', ['$http',
     function ($http) {
         var rootUrl = window.urlRoot + 'ExternalTable/';
         return {

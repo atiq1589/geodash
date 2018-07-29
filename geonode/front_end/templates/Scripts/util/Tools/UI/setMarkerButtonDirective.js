@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .directive('setMarker', setMarker);
 setMarker.$inject = ['mapTools'];
 

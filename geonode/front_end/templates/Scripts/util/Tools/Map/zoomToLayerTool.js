@@ -1,4 +1,4 @@
-﻿mapModule.factory('ZoomToLayerTool', [
+﻿angular.module("mapModule").factory('ZoomToLayerTool', [
     function () {
         return function ZoomToLayerTool(surfMap) {
             this.zoom = function(surfLayer) {

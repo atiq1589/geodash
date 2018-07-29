@@ -1,4 +1,4 @@
-mapModule.factory('analyticsService', [
+angular.module("mapModule").factory('analyticsService', [
     function() {
 
         var factory = {

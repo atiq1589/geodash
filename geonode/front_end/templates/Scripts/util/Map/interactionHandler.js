@@ -1,4 +1,4 @@
-﻿mapModule.factory('interactionHandler', [
+﻿angular.module("mapModule").factory('interactionHandler', [
     'mapModes', 'featureService',
     function (mapModes, featureService) {
 

@@ -1,4 +1,4 @@
-﻿appModule.factory('wmsSelectionLayer', [
+﻿angular.module('appModule').factory('wmsSelectionLayer', [
     function () {
         return function (layerInfos) {
 

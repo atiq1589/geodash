@@ -1,4 +1,4 @@
-﻿mapModule.factory('WmsDeleteFeatureTool', [
+﻿angular.module("mapModule").factory('WmsDeleteFeatureTool', [
     'featureService', 'jantrik.Event',
     function (featureService, Event) {
         return function WmsDeleteFeatureTool(surfLayer, wmsSelectFeatureTool) {

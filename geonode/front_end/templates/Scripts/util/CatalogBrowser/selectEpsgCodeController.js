@@ -1,4 +1,4 @@
-﻿appModule.controller('selectEpsgCodeController', [
+﻿angular.module('appModule').controller('selectEpsgCodeController', [
     '$scope', 'epsgCodes', '$modalInstance', 'onSelect', 'fileId', 'fileName', 'epsgService',
     function ($scope, epsgCodes, $modalInstance, onSelect, fileId, fileName, epsgService) {
         $scope.isProcessing = false;

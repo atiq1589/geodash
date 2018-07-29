@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('focusMe', [
+﻿angular.module("app.helpers").directive('focusMe', [
     '$parse', '$timeout', function ($parse, $timeout) {
         return {
             link: function (scope, element, attrs) {

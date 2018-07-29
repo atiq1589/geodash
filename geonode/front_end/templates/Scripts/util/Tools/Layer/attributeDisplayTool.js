@@ -1,4 +1,4 @@
-﻿mapModule.factory('AttributeDisplayTool', [
+﻿angular.module("mapModule").factory('AttributeDisplayTool', [
     'reprojection', 'jantrik.Event', '$timeout',
     function (reprojection, Event, $timeout) {
         return function AttributeDisplayTool(surfLayer, selectFeatureTool, olOverlay, olMap) {

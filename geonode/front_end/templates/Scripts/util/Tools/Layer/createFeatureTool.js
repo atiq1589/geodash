@@ -1,4 +1,4 @@
-﻿mapModule.factory('CreateFeatureTool', [
+﻿angular.module("mapModule").factory('CreateFeatureTool', [
     'surfFeatureFactory', 'jantrik.Event', 'featureService', 'ol',
     function (surfFeatureFactory, Event, featureService, ol) {
         return function (surfLayer, olDrawInteraction, olInteractiveSource) {

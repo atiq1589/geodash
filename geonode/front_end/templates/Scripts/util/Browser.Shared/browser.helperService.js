@@ -1,4 +1,4 @@
-﻿appModule.factory('helperService',
+﻿angular.module('appModule').factory('helperService',
     ['surfToastr', '$timeout',
     function (surfToastr, $timeout) {
         return {

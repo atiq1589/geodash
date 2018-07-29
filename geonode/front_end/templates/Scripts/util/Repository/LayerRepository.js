@@ -1,4 +1,4 @@
-﻿repositoryModule.factory('layerRepository', [
+﻿angular.module('repositoryModule').factory('layerRepository', [
     '$http', 'urlResolver', 'dirtyManager', '$window', 'surfFeatureFactory', '$q', '$window', '$cookies',
     function($http, urlResolver, dirtyManager, $window, surfFeatureFactory, $q, $window, $cookies) {
         return {

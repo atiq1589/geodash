@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .factory('MeasurementTool', MeasurementTool);
 MeasurementTool.$inject = ['mapService'];
 

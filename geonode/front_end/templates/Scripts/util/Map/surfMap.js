@@ -1,4 +1,4 @@
-﻿mapModule.factory('SurfMap', ['surfLayerFactory', 'featureService', 'jantrik.Event', 'ol', '$rootScope',
+﻿angular.module("mapModule").factory('SurfMap', ['surfLayerFactory', 'featureService', 'jantrik.Event', 'ol', '$rootScope',
     function(surfLayerFactory, featureService, Event, ol, $rootScope) {
         return function SurfMap(olMap) {
             var _userInteractions = [];

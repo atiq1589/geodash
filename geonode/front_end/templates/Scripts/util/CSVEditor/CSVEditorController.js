@@ -1,4 +1,4 @@
-﻿appModule.controller('CSVEditorController', [
+﻿angular.module('appModule').controller('CSVEditorController', [
     '$scope', 'CSVEditorService', '$modalInstance', 'dataId', 'isReadOnly', 'surfToastr', function ($scope, CSVEditorService, $modalInstance, dataId, isReadOnly, surfToastr) {
 
         $scope.pagination = { totalItems: 0, currentPage: 1, itemsPerPage: 5, pageSizes: [5, 10, 50, 100] };

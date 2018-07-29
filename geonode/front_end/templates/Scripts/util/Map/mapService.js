@@ -1,4 +1,4 @@
-﻿mapModule.factory('mapService', [
+﻿angular.module("mapModule").factory('mapService', [
     'mapRepository', 'SurfMap', 'layerService', 'layerStyleGenerator', 'mapTools', 'LayerService', '$q',
     function(mapRepository, SurfMap, layerService, layerStyleGenerator, mapTools, newLayerService, $q) {
         var map;

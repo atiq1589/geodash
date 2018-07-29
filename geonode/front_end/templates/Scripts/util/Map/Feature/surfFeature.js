@@ -1,4 +1,4 @@
-﻿mapModule.factory('SurfFeature', ['attributeTypes', 'fidColumnName', 'imageColumnName', 'imageUrlRoot', 'imageFileExtension',
+﻿angular.module("mapModule").factory('SurfFeature', ['attributeTypes', 'fidColumnName', 'imageColumnName', 'imageUrlRoot', 'imageFileExtension',
     function (attributeTypes, fidColumnName, imageColumnName, imageUrlRoot, imageFileExtension) {
         function SurfFeature(wrappedFeature, surfLayer) {
             var _thisFeature = this;

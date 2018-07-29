@@ -1,4 +1,4 @@
-﻿mapModule.factory('WmsEditFeatureTool', [
+﻿angular.module("mapModule").factory('WmsEditFeatureTool', [
     'featureService', 'jantrik.Event', 'surfFeatureFactory',
     function (featureService, Event, surfFeatureFactory) {
         return function WmsEditFeatureTool(surfLayer, wmsSelectFeatureTool, olModifyInteraction, olInteractiveSource, featureCollection) {

@@ -1,4 +1,4 @@
-﻿appModule.controller('csvHeaderMappingController', [
+﻿angular.module('appModule').controller('csvHeaderMappingController', [
     '$scope', '$modalInstance', 'file', '$timeout', 'csvHeaderMappingService', 'surfToastr',
     function ($scope, $modalInstance, file, $timeout, csvHeaderMappingService, surfToastr) {
 

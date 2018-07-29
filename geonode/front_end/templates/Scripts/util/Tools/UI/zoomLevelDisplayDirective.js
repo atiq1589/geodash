@@ -1,4 +1,4 @@
-﻿mapModule.directive('zoomLevelDisplay', [
+﻿angular.module("mapModule").directive('zoomLevelDisplay', [
     'mapTools', '$timeout',
     function (mapTools, $timeout) {
         return {

@@ -1,4 +1,4 @@
-﻿appHelperModule.factory('attributeValidator', [function () {
+﻿angular.module("app.helpers").factory('attributeValidator', [function () {
 
     function setValueOnValidation(isValid, valueObject, propertyKey, itemBeforeChange) {
         if (isValid) {

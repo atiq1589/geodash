@@ -1,4 +1,4 @@
-﻿appHelperModule.directive("minMaxValidator", ["$timeout", function ($timeout) {
+﻿angular.module("app.helpers").directive("minMaxValidator", ["$timeout", function ($timeout) {
     function updateModelValue(modelController, value) {
         $timeout(function () {
             modelController.$setViewValue(value);

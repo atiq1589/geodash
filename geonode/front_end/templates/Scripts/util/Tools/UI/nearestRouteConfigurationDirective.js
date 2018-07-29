@@ -1,7 +1,7 @@
 /**
  * Created by rudra on 4/17/18.
  */
-mapModule
+angular.module("mapModule")
     .directive('nearestConfiguration', nearestConfiguration);
 nearestConfiguration.$inject = ['mapTools', 'mapService'];
 

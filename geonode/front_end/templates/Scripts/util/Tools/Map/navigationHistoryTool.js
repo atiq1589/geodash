@@ -1,4 +1,4 @@
-﻿mapModule.factory('NavigationHistoryTool', [
+﻿angular.module("mapModule").factory('NavigationHistoryTool', [
     'RedoUndo', '$timeout',
     function NavigationHistoryTool(RedoUndo, $timeout) {
         return function (olMap) {

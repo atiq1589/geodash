@@ -1,4 +1,4 @@
-﻿mapModule.factory('ZoomTrackerTool', [
+﻿angular.module("mapModule").factory('ZoomTrackerTool', [
     'jantrik.Event',
     function (Event) {
         return function ZoomTrackerTool(olMap) {

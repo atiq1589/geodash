@@ -1,4 +1,4 @@
-﻿appModule.factory('sldGenerator', ['sldTemplateService', 'strokeDashstyles', 'pointTextGraphics',
+﻿angular.module('appModule').factory('sldGenerator', ['sldTemplateService', 'strokeDashstyles', 'pointTextGraphics',
     function (sldTemplateService, strokeDashstyles, pointTextGraphics) {
 
         var types = { point: getPointTemplate, polyline: getPolylineTemplate, polygon: getPolygonTemplate, geoTiff: getRasterTemplate, geoPdf: getRasterTemplate };

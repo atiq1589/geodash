@@ -1,5 +1,5 @@
 (function() {
-    appModule
+    angular.module('appModule')
         .controller('MapController', MapController);
 
     MapController.$inject = ['mapService', '$window', 'analyticsService', 'LayerService', '$scope', 'layerService', 'queryOutputFactory', '$rootScope','$interval','urlResolver','mapTools','layerRepository','$q','SurfFeature','$timeout'];

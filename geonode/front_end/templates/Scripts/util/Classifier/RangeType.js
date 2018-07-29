@@ -1,4 +1,5 @@
-﻿function RangeType(http, scope, rangeCalculator, attributeDefinitionHelper, filter, layerRepository) {
+﻿import ClassType from './ClassType';
+function RangeType(http, scope, rangeCalculator, attributeDefinitionHelper, filter, layerRepository) {
     var $this = this;
     var $http = http;
     var $scope = scope;

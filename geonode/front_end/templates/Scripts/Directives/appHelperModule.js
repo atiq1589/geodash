@@ -1,6 +1,6 @@
 ﻿var appHelperModule = angular.module("app.helpers", ['app.filters', 'surfToastr','LayerApp']);
 
-appHelperModule.factory('attributeTypes', [
+angular.module("app.helpers").factory('attributeTypes', [
     'defaultDateFormat',
     'defaultDateTimeFormat',
     '$filter',
@@ -82,7 +82,7 @@ appHelperModule.factory('attributeTypes', [
     }
 ]);
 
-appHelperModule.factory('attributeDefinitionHelper', ['attributeTypes',
+angular.module("app.helpers").factory('attributeDefinitionHelper', ['attributeTypes',
     function (attributeTypes) {
         function getSpecificTypeDefs(attributeDefs, comparators) {
             var passedAttributeDefs = [];
@@ -122,7 +122,7 @@ appHelperModule.factory('attributeDefinitionHelper', ['attributeTypes',
         return factory;
     }]);
 
-appHelperModule.directive('cogs', [function () {
+angular.module("app.helpers").directive('cogs', [function () {
     return {
         restrict: 'AE',
         template: '<i class="fa fa-cog fa-spin" style="font-size: 23px;"></i>' +
@@ -131,7 +131,7 @@ appHelperModule.directive('cogs', [function () {
     }
 }]);
 
-appHelperModule.factory('cqlFilterCharacterFormater', [
+angular.module("app.helpers").factory('cqlFilterCharacterFormater', [
     function () {
         return {
             formatSpecialCharacters: function (style) {
@@ -141,7 +141,7 @@ appHelperModule.factory('cqlFilterCharacterFormater', [
     }
 ]);
 
-appHelperModule.directive('scrollablePane', [
+angular.module("app.helpers").directive('scrollablePane', [
     function () {
         return {
             restrict: 'C',
@@ -163,7 +163,7 @@ appHelperModule.directive('scrollablePane', [
     }
 ]);
 
-appHelperModule.factory('guidGenerator', [function () {
+angular.module("app.helpers").factory('guidGenerator', [function () {
 
     function guid() {
         function s4() {
@@ -183,7 +183,7 @@ appHelperModule.factory('guidGenerator', [function () {
     }
 }]);
 
-appHelperModule.directive('allowSingleCharacter', [function () {
+angular.module("app.helpers").directive('allowSingleCharacter', [function () {
     return {
         require: 'ngModel',
         link: function (scope, elem, attr, ngModelController) {
@@ -200,7 +200,7 @@ appHelperModule.directive('allowSingleCharacter', [function () {
     }
 }]);
 
-appHelperModule.directive('surfImageSlider', [
+angular.module("app.helpers").directive('surfImageSlider', [
     function () {
         return {
             restrict: 'EA',

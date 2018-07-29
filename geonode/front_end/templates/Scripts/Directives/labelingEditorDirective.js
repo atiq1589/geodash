@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('labelingEditor', [
+﻿angular.module("app.helpers").directive('labelingEditor', [
     function () {
         return {
             restrict: 'AE',

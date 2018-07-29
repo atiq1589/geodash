@@ -1,4 +1,4 @@
-﻿appModule.controller('shareDataController', ['$scope', 'selectedDataId', 'catalogDataService', '$modalInstance', 'surfToastr',
+﻿angular.module('appModule').controller('shareDataController', ['$scope', 'selectedDataId', 'catalogDataService', '$modalInstance', 'surfToastr',
     function ($scope, selectedDataId, catalogDataService, $modalInstance, surfToastr) {
         var userStates = {};
         var initialSharedEmails = [];

@@ -1,4 +1,4 @@
-appModule.controller('projectBrowserController', ['$scope', '$window', '$rootScope', 'showProjectNameInput', 'projectService', '$modalInstance', 'surfToastr', '$modal', 'mapService', 'dirtyManager', 'urlResolver', 'subscriptionStatus', 'helperService', '$http',
+angular.module('appModule').controller('projectBrowserController', ['$scope', '$window', '$rootScope', 'showProjectNameInput', 'projectService', '$modalInstance', 'surfToastr', '$modal', 'mapService', 'dirtyManager', 'urlResolver', 'subscriptionStatus', 'helperService', '$http',
     function($scope, $window, $rootScope, showProjectNameInput, projectService, $modalInstance, surfToastr, $modal, mapService, dirtyManager, urlResolver, subscriptionStatus, helperService, $http) {
         $scope.project = { showNameInput: showProjectNameInput };
         $scope.currentlyViewingFiles = [];

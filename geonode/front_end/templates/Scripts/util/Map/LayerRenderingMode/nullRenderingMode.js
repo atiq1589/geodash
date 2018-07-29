@@ -1,4 +1,4 @@
-﻿mapModule.factory('NullRenderingMode', [
+﻿angular.module("mapModule").factory('NullRenderingMode', [
     function () {
         return function NullRenderingMode(tools) {
             this.activate = function () { };

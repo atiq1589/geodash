@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('attributeDefinitionTable', ['attributeTypes',
+﻿angular.module("app.helpers").directive('attributeDefinitionTable', ['attributeTypes',
     function (attributeTypes) {
         return {
             restrict: 'AE',

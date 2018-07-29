@@ -1,4 +1,4 @@
-﻿mapModule.factory('surfLayerFactory', [
+﻿angular.module("mapModule").factory('surfLayerFactory', [
     'mapModes', 'SurfFeature', 'mapAccessLevel', 'urlResolver', 'NullSurfLayer', 'SourceLessSurfLayer', 'WmsSurfLayer', 'WmsSelectFeatureTool', 'CreateFeatureTool', 'WmsSelectionDisplayTool', 'WmsDeleteFeatureTool', 'WmsEditFeatureTool', 'RedoUndoTool', 'ClearFeaturesTool', 'SimpleWmsRenderingMode', 'NullRenderingMode', 'layerRenderingModeFactory',
     function (mapModes, SurfFeature, mapAccessLevel, urlResolver, NullSurfLayer, SourceLessSurfLayer, WmsSurfLayer, WmsSelectFeatureTool, CreateFeatureTool, WmsSelectionDisplayTool, WmsDeleteFeatureTool, WmsEditFeatureTool, RedoUndoTool, ClearFeaturesTool, SimpleWmsRenderingMode, NullRenderingMode, layerRenderingModeFactory) {
 

@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .factory('ZoomToExtentTool', ZoomToExtentTool);
 ZoomToExtentTool.$inject = ['mapService'];
 

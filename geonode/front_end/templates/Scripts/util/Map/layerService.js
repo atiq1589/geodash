@@ -1,4 +1,4 @@
-﻿mapModule.factory('layerService', layerService);
+﻿angular.module("mapModule").factory('layerService', layerService);
 
 layerService.$inject = [
     '$rootScope', 'layerRepository', 'featureService', 'layerStyleGenerator', 'featureFilterGenerator', 'sldTemplateService', 'interactionHandler', '$q', 'LayerService', 'visualizationService', 'layerRenderingModeFactory', '$window'

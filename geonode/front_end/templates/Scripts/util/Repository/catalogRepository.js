@@ -1,4 +1,4 @@
-﻿repositoryModule.factory('catalogRepository', [
+﻿angular.module('repositoryModule').factory('catalogRepository', [
     '$http', 'urlResolver',
     function ($http, urlResolver) {
 

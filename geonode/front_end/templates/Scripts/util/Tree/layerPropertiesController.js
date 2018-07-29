@@ -1,4 +1,4 @@
-﻿appModule.controller('layerPropertiesCtrl', ['$timeout', '$scope', '$http', '$filter', '$modalInstance', 'data', 'inputData', 'settingsData', 'layer', 'LayerService', 'surfToastr',
+﻿angular.module('appModule').controller('layerPropertiesCtrl', ['$timeout', '$scope', '$http', '$filter', '$modalInstance', 'data', 'inputData', 'settingsData', 'layer', 'LayerService', 'surfToastr',
     function($timeout, $scope, $http, $filter, $modalInstance, data, inputData, settingsData, layer, LayerService, surfToastr) {
         $scope.hasPermission = false;
         $scope.settingsData = settingsData;

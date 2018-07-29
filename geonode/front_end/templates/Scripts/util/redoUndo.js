@@ -1,4 +1,4 @@
-﻿appModule.factory('RedoUndo', [
+﻿angular.module('appModule').factory('RedoUndo', [
     function () {
         function RedoUndo() {
             var _this = this;

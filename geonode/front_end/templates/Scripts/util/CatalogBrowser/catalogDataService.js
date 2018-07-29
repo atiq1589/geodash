@@ -1,4 +1,4 @@
-﻿appModule.factory("catalogDataService", [
+﻿angular.module('appModule').factory("catalogDataService", [
     '$http',
     function ($http) {
         var catalogData;

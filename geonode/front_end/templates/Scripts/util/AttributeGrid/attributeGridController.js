@@ -1,4 +1,4 @@
-﻿appModule.controller('attributeGridController', ['$scope', '$rootScope', 'featureRepository',
+﻿angular.module('appModule').controller('attributeGridController', ['$scope', '$rootScope', 'featureRepository',
     'attributeGridService', 'attributeValidator', 'mapService', 'featureService', 'attributeTypes',
     'cqlFilterCharacterFormater', 'mapTools', '$timeout', 'mapAccessLevel', 'LayerService','surfToastr','urlResolver',
     function($scope, $rootScope, featureRepository, attributeGridService, attributeValidator,

@@ -1,4 +1,4 @@
-﻿appModule.controller('treeController', ['$scope', '$window', '$http', '$rootScope', '$modal', '$timeout', 'mapRepository', 'mapService', 'layerService', 'mapTools',
+﻿angular.module('appModule').controller('treeController', ['$scope', '$window', '$http', '$rootScope', '$modal', '$timeout', 'mapRepository', 'mapService', 'layerService', 'mapTools',
     function($scope, $window, $http, $rootScope, $modal, $timeout, mapRepository, mapService, layerService, mapTools) {
         $scope.mapService = mapService;
         var activeLayerTool = mapTools.activeLayer || {

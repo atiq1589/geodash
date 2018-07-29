@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('stylePreviewSmall', [
+﻿angular.module("app.helpers").directive('stylePreviewSmall', [
     'featureTypes',
     function (featureTypes) {
         var defaultTemplate='/static/Templates/stylePreviewSmall.html';

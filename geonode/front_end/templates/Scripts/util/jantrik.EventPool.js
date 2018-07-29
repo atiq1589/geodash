@@ -15,7 +15,7 @@ jantrik.EventPool = (function () {
         var handlerList = getHandlerList(eventName);
         handlerList.push(handler);
 
-        return this;
+        return window;
     }
 
     function registerAll(eventNames, handler) {
@@ -23,7 +23,7 @@ jantrik.EventPool = (function () {
             register(eventNames[i], handler);
         }
 
-        return this;
+        return window;
     }
 
     function broadcast(eventName) {
@@ -31,15 +31,17 @@ jantrik.EventPool = (function () {
         var eventData = Array.prototype.slice.call(arguments, 1);
 
         for (var i in handlerList) {
-            handlerList[i].apply(this, eventData);
+            handlerList[i].apply(window, eventData);
         }
 
-        return this;
+        return window;
     }
 
-    this.register = register;
-    this.registerAll = registerAll;
-    this.broadcast = broadcast;
+    window.register = register;
+    window.registerAll = registerAll;
+    window.broadcast = broadcast;
 
-    return this;
+    return window;
 })();
+
+export default jantrik;

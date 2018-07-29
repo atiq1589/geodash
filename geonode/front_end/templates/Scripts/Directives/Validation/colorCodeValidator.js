@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('colorCodeValidator', [
+﻿angular.module("app.helpers").directive('colorCodeValidator', [
     function () {
         return {
             require: 'ngModel',

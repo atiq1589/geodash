@@ -1,4 +1,4 @@
-appHelperModule.factory('controlVisibleFactory', function() {
+angular.module("app.helpers").factory('controlVisibleFactory', function() {
     return {
         isTextControlVisible: function(controlType) {
              if (controlType === "text" || controlType === undefined)
@@ -14,7 +14,7 @@ appHelperModule.factory('controlVisibleFactory', function() {
     };
 });
 
-appHelperModule.factory('queryOutputFactory', function() {
+angular.module("app.helpers").factory('queryOutputFactory', function() {
     return {
 
          htmlEntities:function(str) {
@@ -112,7 +112,7 @@ appHelperModule.factory('queryOutputFactory', function() {
     };
 });
 
-appHelperModule.directive('queryBuilder', ['$compile','controlVisibleFactory','LayerService','$window','mapTools',
+angular.module("app.helpers").directive('queryBuilder', ['$compile','controlVisibleFactory','LayerService','$window','mapTools',
  function ($compile,controlVisibleFactory,LayerService,$window,mapTools) {
     return {
         restrict: 'E',

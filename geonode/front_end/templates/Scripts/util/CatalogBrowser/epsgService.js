@@ -1,4 +1,4 @@
-﻿appModule.factory('epsgService', [
+﻿angular.module('appModule').factory('epsgService', [
     '$http', 'urlResolver',
     function ($http, urlResolver) {
         var knownEpsgCodeSet = {};

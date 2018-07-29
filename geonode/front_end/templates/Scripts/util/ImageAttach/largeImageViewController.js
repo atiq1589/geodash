@@ -1,4 +1,4 @@
-﻿appModule.controller('largeImageViewController', [
+﻿angular.module('appModule').controller('largeImageViewController', [
     '$scope', 'surfToastr', 'featureService', 'isReadonly', '$modalInstance', function ($scope, surfToastr, featureService, isReadonly, $modalInstance) {
 
         $scope.isReadonly = isReadonly;

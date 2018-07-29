@@ -1,4 +1,4 @@
-﻿appModule.controller('imagePreviewController', [
+﻿angular.module('appModule').controller('imagePreviewController', [
     '$scope', '$rootScope', '$modal', 'featureService', function ($scope, $rootScope, $modal, featureService) {
 
         $scope.getImages = function () {

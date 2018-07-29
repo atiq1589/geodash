@@ -1,4 +1,4 @@
-﻿repositoryModule.factory('featureRepository', [
+﻿angular.module('repositoryModule').factory('featureRepository', [
     '$http', 'urlResolver', 'dirtyManager', 'surfToastr',
     function ($http, urlResolver, dirtyManager, surfToastr) {
         

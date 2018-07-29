@@ -1,4 +1,6 @@
-﻿var treeModule = angular.module('tree', ['ui.sortable']);
+﻿var jantrik = require('../util/jantrik.EventPool').default;
+
+var treeModule = angular.module('tree', ['ui.sortable']);
 
 treeModule.directive('treeAngle', ['utilityService',
     function (utilityService) {

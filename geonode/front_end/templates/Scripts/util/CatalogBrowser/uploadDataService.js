@@ -1,4 +1,4 @@
-﻿appModule.factory('uploadDataService', ['layerRepository', 'catalogDataService', 'surfToastr', 'urlResolver', '$http',
+﻿angular.module('appModule').factory('uploadDataService', ['layerRepository', 'catalogDataService', 'surfToastr', 'urlResolver', '$http',
     function (layerRepository, catalogDataService, surfToastr, urlResolver, $http) {
 
         var factory = {

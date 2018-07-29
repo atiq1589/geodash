@@ -1,4 +1,4 @@
-﻿mapModule.directive('featureEditButtons', [
+﻿angular.module("mapModule").directive('featureEditButtons', [
     'interactionHandler', 'mapModes', 'mapTools',
     function (interactionHandler, mapModes, mapTools) {
         return {

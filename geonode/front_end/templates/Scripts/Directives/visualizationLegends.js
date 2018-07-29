@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('visualizationLegend', ['mapTools', 'utilityService',
+﻿angular.module("app.helpers").directive('visualizationLegend', ['mapTools', 'utilityService',
 function (mapTools, utilityService) {
     return {
         restrict: 'EAC',

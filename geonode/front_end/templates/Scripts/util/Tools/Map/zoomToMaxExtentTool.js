@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .factory('ZoomToMaxExtentTool', ZoomToMaxExtentTool);
 ZoomToMaxExtentTool.$inject = ['$interval'];
 

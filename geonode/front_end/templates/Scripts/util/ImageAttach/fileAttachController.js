@@ -1,4 +1,4 @@
-﻿appModule.controller('FileAttachController', ['$scope', 'FileUploader', 'feature', 'surfToastr', 'dirtyManager', 'urlResolver',
+﻿angular.module('appModule').controller('FileAttachController', ['$scope', 'FileUploader', 'feature', 'surfToastr', 'dirtyManager', 'urlResolver',
     function ($scope, FileUploader, feature, surfToastr, dirtyManager, urlResolver) {
 
         var fid = feature.getFid();

@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('propertyGrid', [
+﻿angular.module("app.helpers").directive('propertyGrid', [
     'attributeValidator', 'featureService', 'surfToastr', 'dirtyManager', 'attributeTypes', 'mapAccessLevel', 'mapTools',
     function (attributeValidator, featureService, surfToastr, dirtyManager, attributeTypes, mapAccessLevel, mapTools) {
         return {

@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('datePicker', [
+﻿angular.module("app.helpers").directive('datePicker', [
     function () {
         return {
             restrict: 'A',

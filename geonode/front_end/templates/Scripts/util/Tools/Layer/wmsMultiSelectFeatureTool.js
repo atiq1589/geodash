@@ -1,4 +1,4 @@
-mapModule.factory('WmsMultiSelectFeatureTool', [
+angular.module("mapModule").factory('WmsMultiSelectFeatureTool', [
 
     'urlResolver',
 

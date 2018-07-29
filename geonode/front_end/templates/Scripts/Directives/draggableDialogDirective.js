@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('modalWindow', [function () {
+﻿angular.module("app.helpers").directive('modalWindow', [function () {
     return {
         restrict: 'EAC',
         link: function (scope, element) {

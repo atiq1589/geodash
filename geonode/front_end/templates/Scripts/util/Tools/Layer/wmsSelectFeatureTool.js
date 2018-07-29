@@ -1,4 +1,4 @@
-﻿mapModule.factory('WmsSelectFeatureTool', [
+﻿angular.module("mapModule").factory('WmsSelectFeatureTool', [
     'featureService', 'jantrik.Event', 'surfFeatureFactory','LayerService',
     function (featureService, Event, surfFeatureFactory,LayerService) {
         function WmsSelectFeature(olMap, surfLayer, olLayer, surfMap, options) {

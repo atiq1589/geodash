@@ -1,4 +1,4 @@
-﻿appModule.factory('subscriptionStatus', ['$http', 'urlResolver', 'surfToastr',
+﻿angular.module('appModule').factory('subscriptionStatus', ['$http', 'urlResolver', 'surfToastr',
     function ($http, urlResolver, surfToastr) {
 
         var resourceUsage = {

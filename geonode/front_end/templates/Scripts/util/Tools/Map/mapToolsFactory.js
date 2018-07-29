@@ -1,4 +1,4 @@
-﻿mapModule.factory('mapToolsFactory', mapToolsFactory);
+﻿angular.module("mapModule").factory('mapToolsFactory', mapToolsFactory);
 mapToolsFactory.$inject = [
     'ol',
     'GeoLocationTool',

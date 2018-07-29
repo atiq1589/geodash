@@ -1,4 +1,4 @@
-﻿appModule.factory('onZoomHandler', ['mapService', '$rootScope', function (mapService, $rootScope) {
+﻿angular.module('appModule').factory('onZoomHandler', ['mapService', '$rootScope', function (mapService, $rootScope) {
 
     function configureLayerVisibility(layer, mapZoomLevel) {
         var layerVisibilityZoomLevel = layer.getZoomLevel();

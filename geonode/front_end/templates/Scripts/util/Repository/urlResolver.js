@@ -1,4 +1,4 @@
-﻿repositoryModule.factory('urlResolver', ['$location', '$window', function($location, $window) {
+﻿angular.module('repositoryModule').factory('urlResolver', ['$location', '$window', function($location, $window) {
     var geoserverRoot = 'null';//'http://localhost:8123/';
     var geoserverTileRoot = null;
 

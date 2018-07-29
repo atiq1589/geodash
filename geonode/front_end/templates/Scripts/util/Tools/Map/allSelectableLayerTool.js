@@ -1,4 +1,4 @@
-﻿mapModule.factory('AllSelectableLayerTool', [
+﻿angular.module("mapModule").factory('AllSelectableLayerTool', [
     function() {
         return function AllSelectableLayerTool(surfMap) {
             surfMap.events.register('layerAdded', function(surfLayer) {

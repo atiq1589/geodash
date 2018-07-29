@@ -1,4 +1,4 @@
-﻿appModule.factory('attributeGridService', ['layerRepository', 'featureService', 'surfFeatureFactory', 'mapService', 'mapAccessLevel','LayerService','layerService',
+﻿angular.module('appModule').factory('attributeGridService', ['layerRepository', 'featureService', 'surfFeatureFactory', 'mapService', 'mapAccessLevel','LayerService','layerService',
     function (layerRepository, featureService, surfFeatureFactory, mapService, mapAccessLevel,LayerService,oldLayerService) {
         var deletedFids, editedRows;
         var image = new ol.style.Circle({

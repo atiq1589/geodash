@@ -1,4 +1,4 @@
-﻿mapModule.factory('BaseMapTool', [
+﻿angular.module("mapModule").factory('BaseMapTool', [
         'ol', 'google', 'jantrik.Event', 'reprojection',
         function (ol, google, Event, reprojection) {
 

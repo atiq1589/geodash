@@ -1,4 +1,4 @@
-﻿appModule.factory('wmsSelectionRasterViewTool', [function () {
+﻿angular.module('appModule').factory('wmsSelectionRasterViewTool', [function () {
     return {
         
     }

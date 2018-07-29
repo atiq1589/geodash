@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .factory('ZoomInOutTool', ZoomInOutTool);
 ZoomInOutTool.$inject = [];
 

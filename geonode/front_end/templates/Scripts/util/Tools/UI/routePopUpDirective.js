@@ -1,4 +1,4 @@
-mapModule.directive('routePopUpDirective', [
+angular.module("mapModule").directive('routePopUpDirective', [
     'mapService', 'LayerService', '$timeout', 'mapToolsFactory', '$http', 'SurfMap', '$cookies', 'urlResolver', '$modal', '$q',
     function (mapService, LayerService, $timeout, mapToolsFactory, $http, SurfMap, $cookies, urlResolver, $modal, $q) {
         return {

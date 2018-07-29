@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('classifierDefinitions', ['featureTypes',
+﻿angular.module("app.helpers").directive('classifierDefinitions', ['featureTypes',
     function (featureTypes) {
         return {
             restrict: 'AE',

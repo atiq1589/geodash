@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('layerStyleEditor', [
+﻿angular.module("app.helpers").directive('layerStyleEditor', [
     function () {
         return {
             restrict: 'E',

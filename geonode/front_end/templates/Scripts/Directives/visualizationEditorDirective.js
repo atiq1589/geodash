@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('visualizationEditor', [
+﻿angular.module("app.helpers").directive('visualizationEditor', [
     function () {
         return {
             restrict: 'AE',

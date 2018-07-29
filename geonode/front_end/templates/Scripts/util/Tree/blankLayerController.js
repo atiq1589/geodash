@@ -1,4 +1,4 @@
-﻿appModule.controller('addBlankLayerCtrl', ['$scope', '$modalInstance', function ($scope, $modalInstance) {
+﻿angular.module('appModule').controller('addBlankLayerCtrl', ['$scope', '$modalInstance', function ($scope, $modalInstance) {
     $scope.layer = {};
     $scope.layerTypes = ["polygon", "polyline", "point"];
 

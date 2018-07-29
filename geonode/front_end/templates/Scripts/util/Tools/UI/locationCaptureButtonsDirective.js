@@ -1,4 +1,4 @@
-﻿mapModule.directive('locationCaptureButtons', [
+﻿angular.module("mapModule").directive('locationCaptureButtons', [
     'interactionHandler', 'mapTools',
     function (interactionHandler, mapTools) {
         var _dummyLocationCaptureTool = {

@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('styleLabel', [
+﻿angular.module("app.helpers").directive('styleLabel', [
     'featureTypes',
     function (featureTypes) {
         return {
@@ -19,7 +19,7 @@
         };
     }]);
 
-appHelperModule.directive('styleEditor', [
+angular.module("app.helpers").directive('styleEditor', [
     'strokeDashstyles', 'pointGraphics', 'featureTypes', 'pointGraphicNames', 'polygonFillPatterns', 'pointTextGraphics',
     function (strokeDashstyles, pointGraphics, featureTypes, pointGraphicNames, polygonFillPatterns, pointTextGraphics) {
         var defaultTemplate= 'static/Templates/styleEditor.html';

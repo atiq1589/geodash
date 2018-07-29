@@ -1,4 +1,4 @@
-﻿mapModule.factory('featureService', [
+﻿angular.module("mapModule").factory('featureService', [
     'featureRepository', '$rootScope', 'layerRepository', '$timeout', 'attributeTypes', '$q', 'surfFeatureFactory',
     function (featureRepository, $rootScope, layerRepository, $timeout, attributeTypes, $q, surfFeatureFactory) {
         var _activeFeature = undefined;

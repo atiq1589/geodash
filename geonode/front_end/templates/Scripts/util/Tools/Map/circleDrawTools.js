@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .factory('CircleDrawTool', CircleDrawTool);
 
 CircleDrawTool.$inject = ['mapService'];

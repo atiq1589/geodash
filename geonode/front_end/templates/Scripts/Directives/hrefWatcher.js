@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('hrefWatcher', [
+﻿angular.module("app.helpers").directive('hrefWatcher', [
     function () {
         return {
             restrict: 'A',

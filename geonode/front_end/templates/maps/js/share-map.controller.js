@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    appModule
+    angular.module('appModule')
         .controller('ShareMapController', ShareMapController);
 
     ShareMapController.$inject = ['$modalInstance', '$window','analyticsService'];

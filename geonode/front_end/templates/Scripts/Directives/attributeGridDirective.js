@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('attributeGrid', ['attributeTypes',
+﻿angular.module("app.helpers").directive('attributeGrid', ['attributeTypes',
 function () {
     return {
         restrict: 'AE',

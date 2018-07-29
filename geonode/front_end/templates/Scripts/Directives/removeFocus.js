@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('removeFocus', [
+﻿angular.module("app.helpers").directive('removeFocus', [
     function () {
         return {
             restrict: 'A',

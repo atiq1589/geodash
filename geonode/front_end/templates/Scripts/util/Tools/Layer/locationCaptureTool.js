@@ -1,4 +1,4 @@
-﻿mapModule.factory('LocationCaptureTool', [
+﻿angular.module("mapModule").factory('LocationCaptureTool', [
     'ol', '$interval',
     function (ol, $interval) {
         function PointHandler(createFeatureTool) {

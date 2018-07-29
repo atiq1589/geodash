@@ -1,5 +1,5 @@
 (function() {
-    appModule
+    angular.module('appModule')
         .controller('OverpassApiQueryBuilderController', OverpassApiQueryBuilderController);
 
     OverpassApiQueryBuilderController.$inject = ['$scope', 'mapService', '$http', '$compile', 'BoxDrawTool', 'layerService', '$window', '$modal', 'surfToastr'];

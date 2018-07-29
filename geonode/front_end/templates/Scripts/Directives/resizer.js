@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('resizable', [
+﻿angular.module("app.helpers").directive('resizable', [
     function () {
         return {
             restrict: 'A',

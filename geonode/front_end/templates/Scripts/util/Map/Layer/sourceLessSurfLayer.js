@@ -1,4 +1,4 @@
-﻿mapModule.factory('SourceLessSurfLayer', [
+﻿angular.module("mapModule").factory('SourceLessSurfLayer', [
     'SurfLayerBase', 'layerInterface', 'ol',
     function (SurfLayerBase, layerInterface, ol) {
         function SourcelessLayer(layerInfo) {

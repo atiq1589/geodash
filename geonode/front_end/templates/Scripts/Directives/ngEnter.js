@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('ngEnter', [
+﻿angular.module("app.helpers").directive('ngEnter', [
     function () {
         return function (scope, element, attrs) {
             element.bind("keydown keypress", function (event) {

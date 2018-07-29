@@ -1,4 +1,4 @@
-﻿appModule.factory('featureFilterGenerator', ['attributeTypes', 'cqlFilterCharacterFormater',
+﻿angular.module('appModule').factory('featureFilterGenerator', ['attributeTypes', 'cqlFilterCharacterFormater',
     function (attributeTypes, cqlFilterCharacterFormater) {
 
         function getFilterStringForClassification(surfLayer) {

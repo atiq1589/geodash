@@ -1,4 +1,4 @@
-﻿function ClassType(scope) {
+﻿export default function ClassType(scope) {
     var $scope = scope;
     var $this = this;
 

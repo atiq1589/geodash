@@ -1,4 +1,5 @@
-﻿function UniqueType(http, scope, attributeTypes, filter) {
+﻿import ClassType from './ClassType';
+function UniqueType(http, scope, attributeTypes, filter) {
     var $this = this;
     var $http = http;
     var $scope = scope;

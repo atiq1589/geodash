@@ -1,4 +1,4 @@
-﻿mapModule.factory('ActiveLayerTool', [
+﻿angular.module("mapModule").factory('ActiveLayerTool', [
     'jantrik.Event',
     function (Event) {
         return function ActiveLayerTool(surfMap, interactionHandler) {

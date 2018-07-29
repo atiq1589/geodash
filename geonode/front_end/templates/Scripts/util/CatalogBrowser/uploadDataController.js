@@ -1,4 +1,4 @@
-﻿appModule.controller("uploadDataController", [
+﻿angular.module('appModule').controller("uploadDataController", [
     '$scope', '$compile', '$timeout', '$modalInstance', '$sce', 'surfToastr', 'subscriptionStatus', 'uploadDataService', 'FileUploader', 'urlResolver', '$q', '$modal',
     function ($scope, $compile, $timeout, $modalInstance, $sce, surfToastr, subscriptionStatus, uploadDataService, FileUploader, urlResolver, $q, $modal) {
 

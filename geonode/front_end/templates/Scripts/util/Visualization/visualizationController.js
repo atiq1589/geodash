@@ -1,4 +1,4 @@
-﻿appModule.controller('visualizationController', ['$scope', 'visualizationService',
+﻿angular.module('appModule').controller('visualizationController', ['$scope', 'visualizationService',
 
     'attributeDefinitionHelper', 'mapTools', //'surfLayer',
 

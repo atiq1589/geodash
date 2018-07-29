@@ -1,4 +1,4 @@
-mapModule.factory('utilityService', ['$http',
+angular.module("mapModule").factory('utilityService', ['$http',
     function($http) {
 
         var factory = {

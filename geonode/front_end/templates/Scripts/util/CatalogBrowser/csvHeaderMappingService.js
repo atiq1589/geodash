@@ -1,4 +1,4 @@
-﻿appModule.factory('csvHeaderMappingService', [
+﻿angular.module('appModule').factory('csvHeaderMappingService', [
     function () {
         var validationMessages = ['Name can have a maximum of 10 characters.',
         "Name may not start with a digit and can be named using letters, numbers, and underscores.",

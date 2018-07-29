@@ -1,4 +1,6 @@
-﻿mapModule.factory('SimpleWmsRenderingMode', [
+﻿var jantrik = require('../../jantrik.EventPool').default;
+
+angular.module("mapModule").factory('SimpleWmsRenderingMode', [
     function() {
         return function SimpleWmsMode(olMap, olLayer, tools) {
             this.tools = tools;

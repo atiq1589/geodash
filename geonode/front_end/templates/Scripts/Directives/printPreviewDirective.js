@@ -4,7 +4,7 @@
 (function() {
     'use strict';
 
-    appModule
+    angular.module('appModule')
         .directive('printPreview', function() {
         return {
             templateUrl: 'static/Templates/Print/printPreviewDirective.html',

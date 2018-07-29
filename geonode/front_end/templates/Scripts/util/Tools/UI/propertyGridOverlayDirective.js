@@ -1,4 +1,4 @@
-﻿appHelperModule.directive('propertyGridOverlay', [
+﻿angular.module("app.helpers").directive('propertyGridOverlay', [
     'mapTools',
     'attributeTypes',
     function (mapTools, attributeTypes) {

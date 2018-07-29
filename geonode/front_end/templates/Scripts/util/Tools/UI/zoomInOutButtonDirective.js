@@ -1,4 +1,4 @@
-mapModule
+angular.module("mapModule")
     .directive('zoomInOutButtons', zoomInOutButtons);
 zoomInOutButtons.$inject = ['mapTools'];
 

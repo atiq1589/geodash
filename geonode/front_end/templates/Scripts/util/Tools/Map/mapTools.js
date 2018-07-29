@@ -1,4 +1,4 @@
-﻿mapModule.factory('mapTools', [
+﻿angular.module("mapModule").factory('mapTools', [
     function () {
         var _tools = {};
         return _tools;

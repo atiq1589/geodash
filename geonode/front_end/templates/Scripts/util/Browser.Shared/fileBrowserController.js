@@ -1,4 +1,4 @@
-﻿appModule.controller('fileBrowserController', ['$scope', 'userProfileService',
+﻿angular.module('appModule').controller('fileBrowserController', ['$scope', 'userProfileService',
     function ($scope, userProfileService) {
         $scope.viewOptions = ['List view', 'Grid view'];
         $scope.fileTypes = ['All', 'Polygon', 'Polyline', 'Point', 'CSV', 'GeoTIFF'];

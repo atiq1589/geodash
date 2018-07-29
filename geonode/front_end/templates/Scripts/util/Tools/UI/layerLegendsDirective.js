@@ -1,4 +1,4 @@
-﻿mapModule.directive('layerLegends', [
+﻿angular.module("mapModule").directive('layerLegends', [
     'mapService',
     function (mapService) {
         return {

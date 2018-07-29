@@ -1,4 +1,4 @@
-﻿mapModule.factory('GeoLocationTool', [
+﻿angular.module("mapModule").factory('GeoLocationTool', [
     'surfToastr', 'jantrik.Event', 'ol',
     function (surfToastr, Event, ol) {
         function GeoLocationTool(olMarker, accuracyFeature, olView, olGeolocation) {

@@ -1,4 +1,4 @@
-﻿mapModule.factory('NullSurfLayer', [
+﻿angular.module("mapModule").factory('NullSurfLayer', [
     'layerInterface', 'jantrik.Event',
     function (layerInterface, Event) {
         return function NullLayer() {
