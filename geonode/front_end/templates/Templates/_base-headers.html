@@ -44,14 +44,13 @@
     {% endautoescape %}
 </script>
 
-
 <script src="{{ STATIC_URL }}Scripts/lib/jquery.min.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/jquery-ui.min.js"></script>
 
 <script src="{{ STATIC_URL }}Scripts/util/jquery.extension.js"></script>
 
 
-<script src="{{ STATIC_URL }}Scripts/lib/moment.min.js"></script>
+<script src="{{ STATIC_URL }}Scripts/lib/moment.min.js"></script> 
 <!-- <script src="{{ STATIC_URL }}Scripts/lib/angular.js"></script> -->
 <script src="{{ STATIC_URL }}Scripts/lib/angular.min.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/angular-animate.min.js"></script>
@@ -67,9 +66,15 @@
 
 <script src="{{ STATIC_URL }}Scripts/lib/underscore-min.js"></script>
 
-<script src="{{ STATIC_URL }}Scripts/util/appMessages.js"></script>
+<script src="{{ STATIC_URL }}.components/angular-ui-grid/ui-grid.min.js"></script>
+<script src="{{ STATIC_URL }}.components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+<script src="{{ STATIC_URL }}node_modules/sarsha-loading-spinner/loading-spinner.min.js"></script>
+
+<script src="{{ STATIC_URL }}lib/dist/streamstech.bundle.js"></script>
+
+<!-- <script src="{{ STATIC_URL }}Scripts/util/appMessages.js"></script> -->
 <script src="{{ STATIC_URL }}Scripts/lib/toastr.min.js"></script>
-<script src="{{ STATIC_URL }}Scripts/util/surfToastr.js"></script>
+<!-- <script src="{{ STATIC_URL }}Scripts/util/surfToastr.js"></script> -->
 
 {% endblock %} {% block extra_script %}
 
@@ -81,11 +86,11 @@
 <!-- <script type="text/javascript" src="https://docs.handsontable.com/0.18.0/bower_components/handsontable/dist/handsontable.full.js"></script>
 <link rel="stylesheet" type="text/css" type="text/css" rel="stylesheet" href="https://docs.handsontable.com/0.18.0/bower_components/handsontable/dist/handsontable.full.min.css"> -->
 
-<script src="{{ STATIC_URL }}.components/angularjs-slider/dist/rzslider.min.js"></script>
+<!-- <script src="{{ STATIC_URL }}.components/angularjs-slider/dist/rzslider.min.js"></script> -->
 <link rel="stylesheet" type="text/css" type="text/css" rel="stylesheet" href="{{ STATIC_URL }}.components/angularjs-slider/dist/rzslider.min.css">
 
 <!-- <script src="{{ STATIC_URL }}.components/angular/angular.min.js"></script> -->
-<script src="{{ STATIC_URL }}Scripts/lib/colors.min.js"></script>
+<!-- <script src="{{ STATIC_URL }}Scripts/lib/colors.min.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/bootstrap-colorpicker-module.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/sortable.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/jantrik/Jantrik.HandsOnTable.js"></script>
@@ -95,10 +100,10 @@
 <script src="{{ STATIC_URL }}Scripts/lib/ui-bootstrap-tpls-0.9.0.min.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/jantrik/Jantrik.GIS.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/jantrik/Jantrik.gradientGenerator.js"></script>
-<script src="{{ STATIC_URL }}Scripts/lib/csvParser.js"></script>
+<script src="{{ STATIC_URL }}Scripts/lib/csvParser.js"></script> -->
 <script src="{{ STATIC_URL }}Scripts/lib/html2canvas.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/html2canvas.svg.js"></script>
-<script src="{{ STATIC_URL }}Scripts/lib/angular-dragdrop.js"></script>
+<!-- <script src="{{ STATIC_URL }}Scripts/lib/angular-dragdrop.js"></script>
 <script src="{{ STATIC_URL }}Scripts/lib/rgbcolor.js"></script>
 
 <script src="{{ STATIC_URL }}Scripts/Filters/appFilters.js"></script>
@@ -128,17 +133,17 @@
 <script src="{{ STATIC_URL }}Scripts/Directives/CsvFileImport/csvImporter.js"></script>
 <script src="{{ STATIC_URL }}Scripts/Directives/mapLegendDirective.js"></script>
 <script src="{{ STATIC_URL }}Scripts/Directives/resizer.js"></script>
-<script src="{{ STATIC_URL }}Scripts/Directives/hrefWatcher.js"></script>
+<script src="{{ STATIC_URL }}Scripts/Directives/hrefWatcher.js"></script> -->
 <!-- <script src="{{ STATIC_URL }}Scripts/Directives/attributeValue.js"></script> -->
-<script src="{{ STATIC_URL }}Scripts/Directives/visualizationLegends.js"></script>
+<!-- <script src="{{ STATIC_URL }}Scripts/Directives/visualizationLegends.js"></script>
 <script src="{{ STATIC_URL }}Scripts/Directives/printMapTilteOptions.js"></script>
 <script src="{{ STATIC_URL }}Scripts/Directives/minMaxValidator.js"></script>
 <script src="{{ STATIC_URL }}Scripts/Directives/QueryBuilder/queryBuilderDirective.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/appModule.js"></script>
-<script src="{{ STATIC_URL }}Scripts/util/analyticsService.js"></script>
-<script src="{{ STATIC_URL }}maps/js/map.controller.js"></script>
+<script src="{{ STATIC_URL }}Scripts/util/analyticsService.js"></script> -->
+<!-- <script src="{{ STATIC_URL }}maps/js/map.controller.js"></script> -->
 
-<script src="{{ STATIC_URL }}Scripts/util/sldTemplates.js"></script>
+<!-- <script src="{{ STATIC_URL }}Scripts/util/sldTemplates.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/sldGenerator.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/Classifier/featureFilterGenerator.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/redoUndo.js"></script>
@@ -198,10 +203,10 @@
 <script src="{{ STATIC_URL }}Scripts/util/controlButtonsController.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/jantrik.EventPool.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/Map/Feature/surfFeature.js"></script>
-<script src="{{ STATIC_URL }}Scripts/util/Map/Feature/surfFeatureFactory.js"></script>
+<script src="{{ STATIC_URL }}Scripts/util/Map/Feature/surfFeatureFactory.js"></script> -->
 <!-- <script src="{{ STATIC_URL }}Scripts/util/Map/analyticsService.js"></script> -->
 
-<script src="{{ STATIC_URL }}Scripts/util/Map/Layer/nullSurfLayer.js"></script>
+<!-- <script src="{{ STATIC_URL }}Scripts/util/Map/Layer/nullSurfLayer.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/Map/Layer/sourceLessSurfLayer.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/Map/Layer/surfLayerBase.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/Map/Layer/wmsSurfLayer.js"></script>
@@ -212,9 +217,9 @@
 <script src="{{ STATIC_URL }}Scripts/util/Map/LayerRenderingMode/simpleWmsRenderingMode.js"></script>
 
 <script src="{{ STATIC_URL }}Scripts/util/Map/interactionHandler.js"></script>
-<script src="{{ STATIC_URL }}Scripts/util/Map/surfMap.js"></script>
+<script src="{{ STATIC_URL }}Scripts/util/Map/surfMap.js"></script> -->
 <!-- <script src="{{ STATIC_URL }}Scripts/util/Map/SurfGIS.OpenLayer.SingleMarkerLayer.js"></script> -->
-<script src="{{ STATIC_URL }}Scripts/util/Map/onZoomHandler.js"></script>
+<!-- <script src="{{ STATIC_URL }}Scripts/util/Map/onZoomHandler.js"></script>
 
 <script src="{{ STATIC_URL }}Scripts/util/Print/printPreviewController.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/jantrik.Event.js"></script>
@@ -266,13 +271,11 @@
 <script src="{{ STATIC_URL }}Scripts/util/Tools/UI/setMarkerButtonDirective.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/Tools/UI/routePopUpDirective.js"></script>
 <script src="{{ STATIC_URL }}Scripts/util/Tools/UI/cursorToolTipDirective.js"></script>
-<script src="{{ STATIC_URL }}Scripts/util/Tools/UI/nearestRouteConfigurationDirective.js"></script>
+<script src="{{ STATIC_URL }}Scripts/util/Tools/UI/nearestRouteConfigurationDirective.js"></script> -->
 
-<script src="{{ STATIC_URL }}.components/angular-ui-grid/ui-grid.min.js"></script>
-<script src="{{ STATIC_URL }}.components/angular-file-upload/dist/angular-file-upload.min.js"></script>
-<script src="{{ STATIC_URL }}node_modules/sarsha-loading-spinner/loading-spinner.min.js"></script>
 
-<script src="{{ STATIC_URL }}layers/js/layer.module.js"></script>
+
+<!-- <script src="{{ STATIC_URL }}layers/js/layer.module.js"></script>
 <script src="{{ STATIC_URL }}layers/js/layer.service.js"></script>
 <script src="{{ STATIC_URL }}layers/js/attribute-view.controller.js"></script>
 <script src="{{ STATIC_URL }}layers/js/feature-preview.controller.js"></script>
@@ -282,7 +285,7 @@
 <script src="{{ STATIC_URL }}geonode/js/system-settings/system-settings.service.js"></script>
     
 <script src="{{ STATIC_URL }}maps/js/share-map.controller.js"></script>
-<script src="{{ STATIC_URL }}Scripts/Directives/printPreviewDirective.js"></script>
+<script src="{{ STATIC_URL }}Scripts/Directives/printPreviewDirective.js"></script> -->
 
 
 {% endblock extra_script %} 
